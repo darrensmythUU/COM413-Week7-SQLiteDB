@@ -40,7 +40,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Check if email exists
-    public boolean checkEmail(){
+    public boolean checkEmail(String email){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("Select * from user where email=?", new String[]{email});
 
